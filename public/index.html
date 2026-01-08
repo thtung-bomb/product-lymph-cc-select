@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./output.css" rel="stylesheet">
-	<link href="./overrides.css" rel="stylesheet">
 	<title>Product</title>
 </head>
 
@@ -17,6 +16,50 @@
 				alt="Logo" class="block max-w-40">
 		</div>
 	</header>
+	<main class="py-8">
+
+		<!-- Image gallery with thumbnails -->
+
+		<!-- Mobile main image -->
+		<div class="mx-3">
+			<!-- main product thumbnail -->
+			<div class="relative flex justify-center">
+
+				<!-- prev button -->
+				<button class="slick-button">
+					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Prev button"
+						class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 cursor-pointer" />
+				</button>
+				<!-- End prev button -->
+
+				<!-- Product image -->
+				<img src="./assets/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.webp" alt="Product image"
+					class="object-cover aspect-1 rounded-lg overflow-hidden" />
+				<!-- nutritional information button -->
+				<div class="absolute bottom-8 flex justify-center rounded-2xl gap-2 px-7 py-2 bg-[#ffffffd9] 
+					text-[14px] border border-black leading-4 border-solid shadow-md max-w-72.5 cursor-pointer">
+					<img src="./assets/leaves_1247958_1.png" alt="" class="w-6" />
+					<span class="text-sm font-medium">
+						Nutritional Information
+					</span>
+				</div>
+				<img src="./assets/nysale.avif" alt="New year sale"
+					class="absolute right-4 top-4 object-cover aspect-1 rounded-lg overflow-hidden max-w-20" />
+
+				<!-- next button -->
+				<button class="slick-button left-0">
+					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Prev button"
+						class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 cursor-pointer" />
+				</button>
+				<!-- End next button -->
+			</div>
+			<!-- end main product thumbnail -->
+			<!-- end mobile main image -->
+
+		</div>
+
+
+	</main>
 </body>
 
 </html>

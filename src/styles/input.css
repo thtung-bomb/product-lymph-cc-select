@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer components {
+  .slick-button {
+    @apply absolute top-1/2 transform -translate-y-1/2 cursor-pointer border-0 hover:bg-transparent;
+  }
+}
