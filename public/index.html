@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./output.css" rel="stylesheet">
 	<title>Product</title>
+	<script src="../src/js/carousel.js" defer></script>
+	<script src="../src/js/nutritional-popup.js" defer></script>
 </head>
 
 <body>
@@ -18,46 +20,81 @@
 	</header>
 	<main class="py-8">
 
-		<!-- Image gallery with thumbnails -->
+		<!-- Image gallery section -->
 
-		<!-- Mobile main image -->
+		<!-- Image gallery section -->
+
+		<!-- Mobile main image / Carousel -->
 		<div class="mx-3">
-			<!-- main product thumbnail -->
 			<div class="relative flex justify-center">
-
-				<!-- prev button -->
-				<button class="slick-button">
-					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Prev button"
-						class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 cursor-pointer" />
+				<button id="prevBtn" class="slick-button rotate-180 left-6" aria-label="Previous">
+					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Prev" class="w-8" />
 				</button>
-				<!-- End prev button -->
-
-				<!-- Product image -->
-				<img src="./assets/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.webp" alt="Product image"
-					class="object-cover aspect-1 rounded-lg overflow-hidden" />
-				<!-- nutritional information button -->
-				<div class="absolute bottom-8 flex justify-center rounded-2xl gap-2 px-7 py-2 bg-[#ffffffd9] 
-					text-[14px] border border-black leading-4 border-solid shadow-md max-w-72.5 cursor-pointer">
-					<img src="./assets/leaves_1247958_1.png" alt="" class="w-6" />
-					<span class="text-sm font-medium">
-						Nutritional Information
-					</span>
+				<div id="mainImageWrap" class="w-full max-w-md">
+					<img id="mainImage"
+						src="https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674"
+						alt="Product image" class="object-cover aspect-1 rounded-lg overflow-hidden w-full" />
 				</div>
-				<img src="./assets/nysale.avif" alt="New year sale"
-					class="absolute right-4 top-4 object-cover aspect-1 rounded-lg overflow-hidden max-w-20" />
-
-				<!-- next button -->
-				<button class="slick-button left-0">
-					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Prev button"
-						class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 cursor-pointer" />
+				<button id="nextBtn" class="slick-button right-6" aria-label="Next">
+					<img src="./assets/iconamoon_arrow-up-2-thin.webp" alt="Next" class="w-8" />
 				</button>
-				<!-- End next button -->
+				<!-- nutritional information -->
+				<div id="nutritionalBtn"
+					class="absolute bottom-8 flex justify-center rounded-2xl gap-2 px-7 py-2 bg-[#ffffffd9] text-[14px] border border-black leading-4 shadow-md max-w-72.5 cursor-pointer">
+					<img src="./assets/leaves_1247958_1.png" alt="" class="w-6" />
+					<span id="open-popup-btn" class="text-sm font-medium">Nutritional Information</span>
+				</div>
+				<img id="saleBadge" src="./assets/nysale.avif" alt="New year sale" class="absolute right-4 top-4 max-w-20" />
 			</div>
-			<!-- end main product thumbnail -->
-			<!-- end mobile main image -->
 
+			<!-- Thumbnails -->
+			<div id="thumbs" class="mt-4 flex gap-2 overflow-x-auto py-2 no-scrollbar"></div>
+			<!-- End thumbnails -->
 		</div>
 
+		<!-- End image gallery section -->
+
+		<!-- Nutritional information -->
+		<div id="nutritional-info-popup"
+			class="hidden bg-[#000000b3] top-0 left-0 w-full h-full z-50 p-3 items-center justify-center">
+			<div class="relative bg-white rounded-lg p-4">
+				<img id="close-popup-button" src="./assets/Button_To_Expand.png"
+					class="absolute border-red-500 border rounded-full top-1.5 right-1.5 cursor-pointer size-6 rotate-45" />
+				<h2 class="text-[24px] text-center my-4 font-normal leading-[1.4em]">Nutritional Information</h2>
+
+				<img src="./assets/ingredients-min.png" />
+
+				<!-- back to product button -->
+				<div class="flex items-center justify-center bg-[#110e0e] my-6 rounded-lg px-7 py-3 cursor-pointer">
+					<span class="text-[16px] py-3 text-center text-white">
+						Try Lymphatic Drainage Risk-Free
+					</span>
+				</div>
+				<!-- End back to product button -->
+
+				<!-- list of points -->
+				<ul>
+					<li class="flex gap-3 items-center justify-start">
+						<img src="./assets/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png" class="size-4" />
+						<span>Made & produced in USA</span>
+					</li>
+					<li class="flex gap-3 items-center justify-start">
+						<img src="./assets/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png" class="size-4" />
+						<span>Made & produced in USA</span>
+					</li>
+					<li class="flex gap-3 items-center justify-start">
+						<img src="./assets/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png" class="size-4" />
+						<span>Made & produced in USA</span>
+					</li>
+					<li class="flex gap-3 items-center justify-start">
+						<img src="./assets/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png" class="size-4" />
+						<span>Made & produced in USA</span>
+					</li>
+				</ul>
+				<!-- End list of points -->
+			</div>
+		</div>
+		<!-- End nutritional information -->
 
 	</main>
 </body>
