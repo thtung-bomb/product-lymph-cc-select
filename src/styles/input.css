@@ -34,6 +34,10 @@
   .font-nunito {
     font-family: "Nunito", sans-serif !important;
   }
+  .trirong {
+    font-family: "Trirong", serif !important;
+    font-optical-sizing: auto;
+  }
   .slick-button {
     @apply absolute top-1/2 transform -translate-y-1/2 cursor-pointer border-0 hover:bg-transparent;
   }
@@ -67,4 +71,46 @@
 
 .product-selector_head {
   @apply bg-white flex flex-col w-full cursor-pointer items-start gap-3 rounded-md border border-[#039869] peer-checked:border-green-700 peer-checked:bg-green-600 transition hover:cursor-pointer;
+}
+
+.product_tab-block {
+  @apply flex flex-col w-full mb-4 my-4 text-[#000000bf] border p-4 rounded-4xl border-[#d2d2d2];
+}
+
+.product_tab-block img {
+  @apply size-6;
+}
+
+.product_tab-content {
+  @apply pt-0 max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out;
+}
+
+.product_tab-thumb {
+  @apply flex justify-between items-center w-full cursor-pointer;
+}
+
+.product_tab-content[data-open="true"] {
+  @apply pt-4 max-h-[1000px] opacity-1;
+}
+
+.group-logos {
+  @apply flex justify-around gap-12.5;
+}
+
+.group-logos img {
+  @apply h-7.5 object-contain;
+}
+
+.marquee {
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
