@@ -114,3 +114,23 @@
     transform: translateX(-50%);
   }
 }
+
+.product_judge-container {
+  @apply max-w-200 m-auto;
+}
+
+.pli_top-list {
+  @apply pl-8 my-2 text-[#0c7c00] bg-[url('./assets/check-mark_17013456_2_1.png')] bg-size-[20px] bg-no-repeat bg-left font-semibold font-['Nunito'] list-none;
+}
+
+.pli_bottom-list {
+  @apply pl-8 my-2 text-[#a60003] bg-[url('./assets/Vector_7.png')] bg-size-[20px] bg-no-repeat bg-left list-none font-semibold font-['Nunito'];
+}
+
+.background-pink-text {
+  @apply bg-[#ffe3e3] my-6 py-2 px-4 rounded-lg;
+}
+
+.product_why-nothing-cell {
+  @apply flex flex-col items-center text-center p-4;
+}
