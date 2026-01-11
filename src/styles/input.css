@@ -1,6 +1,43 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
 @layer components {
+  #open-popup-btn {
+    color: rgba(0, 0, 0, 0.75);
+  }
+  /* Lora helpers: use `class="lora lora-400"` or `lora-700` or `lora-italic` */
+  .lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+  }
+  .lora-400 {
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lora-500 {
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lora-700 {
+    font-weight: 700;
+    font-style: normal;
+  }
+  .lora-italic {
+    font-style: italic;
+  }
+  /* Fallback helper to ensure Nunito is applied when needed */
+  .font-nunito {
+    font-family: "Nunito", sans-serif !important;
+  }
+  .trirong {
+    font-family: "Trirong", serif !important;
+    font-optical-sizing: auto;
+  }
   .slick-button {
     @apply absolute top-1/2 transform -translate-y-1/2 cursor-pointer border-0 hover:bg-transparent;
   }
@@ -30,4 +67,70 @@
 
 #thumbs img.active {
   opacity: 1;
+}
+
+.product-selector_head {
+  @apply bg-white flex flex-col w-full cursor-pointer items-start gap-3 rounded-md border border-[#039869] peer-checked:border-green-700 peer-checked:bg-green-600 transition hover:cursor-pointer;
+}
+
+.product_tab-block {
+  @apply flex flex-col w-full mb-4 my-4 text-[#000000bf] border p-4 rounded-4xl border-[#d2d2d2];
+}
+
+.product_tab-block img {
+  @apply size-6;
+}
+
+.product_tab-content {
+  @apply pt-0 max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out;
+}
+
+.product_tab-thumb {
+  @apply flex justify-between items-center w-full cursor-pointer;
+}
+
+.product_tab-content[data-open="true"] {
+  @apply pt-4 max-h-[1000px] opacity-1;
+}
+
+.group-logos {
+  @apply flex justify-around gap-12.5;
+}
+
+.group-logos img {
+  @apply h-7.5 object-contain;
+}
+
+.marquee {
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.product_judge-container {
+  @apply max-w-200 m-auto;
+}
+
+.pli_top-list {
+  @apply pl-8 my-2 text-[#0c7c00] bg-[url('./assets/check-mark_17013456_2_1.png')] bg-size-[20px] bg-no-repeat bg-left font-semibold font-['Nunito'] list-none;
+}
+
+.pli_bottom-list {
+  @apply pl-8 my-2 text-[#a60003] bg-[url('./assets/Vector_7.png')] bg-size-[20px] bg-no-repeat bg-left list-none font-semibold font-['Nunito'];
+}
+
+.background-pink-text {
+  @apply bg-[#ffe3e3] my-6 py-2 px-4 rounded-lg;
+}
+
+.product_why-nothing-cell {
+  @apply flex flex-col items-center text-center p-4;
 }
