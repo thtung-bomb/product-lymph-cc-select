@@ -66,8 +66,96 @@ const FAQS = [
 	},
 ];
 
+const lymphIngredients = [
+	{
+		title: "Reactivate Lymphatic Pumps",
+		image: "//trysculptique.com/cdn/shop/files/Frame_1484580382.png?v=1760698909",
+		name: "Cleavers Extract",
+		dose: "100mg",
+		content: `
+      <p>Restores rhythmic vessel contractions that move lymph through your system.
+      Contains iridoids that wake up muscle cells in vessel walls.</p>
+      <p>[Study: Enhanced NK cell activity in immunosuppressed models]</p>
+    `
+	},
+	{
+		title: "Flush Excess Fluid",
+		image: "//trysculptique.com/cdn/shop/files/Frame_1484580382_1.png?v=1760939908",
+		name: "Dandelion Extract",
+		dose: "250mg",
+		content: `
+      <p>Proven gentle diuretic that increases fluid excretion without harsh side effects.</p>
+      <p>[Study: First human pilot study on diuretic effects]</p>
+    `
+	},
+	{
+		title: "Break Down Protein Clogs",
+		image: "//trysculptique.com/cdn/shop/files/image_2.png?v=1760939909",
+		name: "Bromelain Powder",
+		dose: "100mg",
+		content: `
+      <p>Proteolytic enzyme that clears blockages preventing drainage.</p>
+      <p>[Study: As effective as prescription NSAIDs]</p>
+    `
+	},
+	{
+		title: "Strengthen Vessel Walls",
+		image: "//trysculptique.com/cdn/shop/files/image_3.png?v=1760939909",
+		name: "Rutin",
+		dose: "100mg",
+		content: `
+      <p>Reduces vessel permeability so fluid doesn't leak back into tissues.</p>
+      <p>[Study: Systematic review of 1,643 participants]</p>
+    `
+	},
+	{
+		title: "Reduce Inflammation",
+		image: "//trysculptique.com/cdn/shop/files/Frame_1484580382_2.png?v=1760939909",
+		name: "Burdock Root Powder",
+		dose: "200mg",
+		content: `
+      <p>Breaks the inflammation–congestion cycle.</p>
+      <p>[Study: 42-day trial in osteoarthritis patients]</p>
+    `
+	},
+	{
+		title: "Boost Immune Clearance",
+		image: "//trysculptique.com/cdn/shop/files/image_4.png?v=1760939909",
+		name: "Echinacea Purpurea Extract",
+		dose: "500mg",
+		content: `
+      <p>Enhances lymphocyte activity for better waste removal.</p>
+      <p>[Study: Increased NK cell cytotoxic activity]</p>
+    `
+	},
+	{
+		title: "Support Metabolism",
+		image: "//trysculptique.com/cdn/shop/files/Frame_1484580382_3.png?v=1760939909",
+		name: "Kelp Extract",
+		dose: "30mg",
+		content: `
+      <p>Provides iodine for thyroid function and metabolic rate.</p>
+      <p>[Study: Dose-dependent increase in TSH]</p>
+    `
+	},
+	{
+		title: "Antioxidant Protection",
+		image: "//trysculptique.com/cdn/shop/files/Frame_1484580382_4.png?v=1760939910",
+		name: "Lemon Powder",
+		dose: "50mg",
+		content: `
+      <p>Protects vessels from oxidative damage.</p>
+      <p>[Study: Triple-masked trial in 90 participants]</p>
+    `
+	}
+];
+
+
+
+
 
 const faqRoot = document.getElementById("faq-root");
+const container = document.getElementById("lymph-accordion");
 
 
 faqRoot.innerHTML = FAQS.map((item, index) => `
@@ -96,4 +184,45 @@ document.querySelectorAll(".faq-header").forEach((header) => {
 
 		item.classList.toggle("active");
 	});
+});
+
+
+container.innerHTML = lymphIngredients.map((item, index) => `
+	<div id="lymph-ingredient-${index}" class="product-lymph-ingredient bg-white ${index === 0 ? 'active' : ''}">
+    
+    <p class="product_lymph-ingr-subtitle nunito">
+      <span>
+        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/check-mark_17013456_2.png" class="max-w-4">
+      </span>
+      <span class="text-[#0c7c00]">${item.title}</span>
+    </p>
+
+    <img class="max-w-30 max-h-20 my-3 mx-auto object-contain"
+         src="${item.image}" loading="lazy">
+
+    <button class="product_lymph-ingr-thumb" data-index="${index}">
+      <div>
+        <h5 class="text-[16px] font-bold trirong text-start">${item.name} (${item.dose})</h5>
+      </div>
+      <div class="max-w-4">
+        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/weui_arrow-outlined.png">
+      </div>
+    </button>
+
+		<div class="product_lymph-ingr-content">
+			${item.content}
+		</div>
+
+  </div>
+`).join("");
+
+document.addEventListener("click", (e) => {
+	const trigger = e.target.closest(".product-lymph-ingredient");
+	if (!trigger) return;
+
+	const item = trigger; // the clicked ingredient element itself
+	const content = item.querySelector(".product_lymph-ingr-content");
+	if (!content) return;
+
+	item.classList.toggle("active");
 });
