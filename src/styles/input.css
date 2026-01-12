@@ -41,6 +41,43 @@
   .slick-button {
     @apply absolute top-1/2 transform -translate-y-1/2 cursor-pointer border-0 hover:bg-transparent;
   }
+
+  /* faq */
+  .faq-title {
+    @apply text-center text-3xl md:text-4xl font-sans;
+  }
+
+  .faq-container {
+    @apply flex flex-col justify-center m-auto gap-3 bg-linear-to-b from-white to-[#f3eee0] max-w-4/5 p-8 rounded-lg;
+  }
+
+  .faq-item {
+    @apply border-b border-b-white overflow-hidden py-4;
+  }
+
+  .faq-header {
+    @apply w-full flex justify-between items-center py-4
+           px-6 text-left font-medium
+           hover:bg-black/5 transition;
+  }
+
+  .faq-icon {
+    @apply w-5 h-5 shrink-0 transition-transform duration-300;
+  }
+
+  .faq-item.active .faq-icon {
+    @apply rotate-180;
+  }
+
+  .faq-content {
+    @apply max-h-0 overflow-hidden px-6 text-black
+           transition-all duration-300 ease-in-out;
+  }
+
+  .faq-item.active .faq-content {
+    @apply max-h-125;
+  }
+  /* end faq */
 }
 
 @layer utilities {
