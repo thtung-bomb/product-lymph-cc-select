@@ -78,6 +78,53 @@
     @apply max-h-125;
   }
   /* end faq */
+
+  /* Lymph ingredient accordion */
+
+  .product-lymph-ingredient {
+    @apply border border-black p-6 overflow-hidden cursor-pointer;
+  }
+
+  .product_lymph-ingr-subtitle {
+    @apply flex items-center gap-2 text-lg font-medium mb-2 text-[#0c7c00];
+  }
+
+  .product_lymph-ingr-content {
+    @apply overflow-hidden
+    max-h-0
+    opacity-0
+    pt-0
+    pb-0
+
+    transition-[max-height,opacity,padding]
+    duration-1000
+    ease-[cubic-bezier(0.22,0.9,0.34,1)]
+
+    group-[.active]:max-h-250
+    group-[.active]:opacity-100
+    group-[.active]:pt-4
+    group-[.active]:pb-4;
+  }
+
+  .product_lymph-ingr-thumb {
+    @apply flex items-center justify-between w-full bg-none border-0 cursor-pointer;
+  }
+
+  .product-lymph-ingredient.active .product_lymph-ingr-thumb img:last-child {
+    @apply transform rotate-180;
+  }
+
+  .product-lymph-ingredient.active .product_lymph-ingr-content {
+    max-height: 600px; /* large enough for content */
+    opacity: 1;
+    padding-top: 0.75rem; /* py-3 equivalent */
+    padding-bottom: 0.75rem;
+  }
+
+  .product_lymph-main-img {
+    @apply max-w-30 my-3 mx-auto object-contain;
+  }
+  /* End lymph ingredient accordion */
 }
 
 @layer utilities {
