@@ -25,6 +25,9 @@
 	<script src="/src/js/refills.js" defer></script>
 	<script src="/src/js/tabs.js" defer></script>
 	<script src="/src/js/accordion.js" defer></script>
+	<script src="https://kit.fontawesome.com/1aac383e36.js" crossorigin="anonymous"></script>
+	<script src="/src/js/rating.js" defer></script>
+	<script src="/src/js/reviews.js" defer></script>
 </head>
 
 <body>
@@ -98,47 +101,47 @@
 
 
 		<!-- Desktop main image  -->
-		<div class="hidden sm:block px-12.5 mx-12.5">
-			<div class="flex justify-center gap-8 px-3">
+		<div class="px-3 sm:px-6 md:px-12.5 md:mx-12.5">
+			<div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 px-0 md:px-3">
 				<!-- leftside -->
-				<div class="w-1/2 flex flex-col gap-4">
+				<div class="hidden w-full md:w-1/2 md:flex flex-col gap-4">
 					<!-- Main product image  -->
 					<div class="relative flex justify-center">
 						<div id="mainImageWrap" class="">
 							<!-- main image -->
 							<img id="mainImage"
 								src="https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674"
-								alt="Product image" class="object-cover aspect-1 rounded-lg overflow-hidden" />
+								alt="Product image" class="object-cover aspect-1 rounded-lg overflow-hidden w-full" />
 							<!-- End main image -->
 						</div>
 
 						<!-- sale badge -->
 						<img id="saleBadge" src="./assets/nysale.avif" alt="New year sale"
-							class="absolute object-cover right-4 top-4 max-w-30" />
+							class="absolute object-cover right-2 sm:right-3 md:right-4 top-2 sm:top-3 md:top-4 max-w-16 sm:max-w-20 md:max-w-30" />
 						<!-- End sale badge -->
 
 						<!-- nutritional information -->
 						<div id="nutritionalBtn"
-							class="absolute bottom-8 flex justify-center rounded-2xl gap-2 px-7 py-2 bg-[#ffffffd9] text-[14px] border border-black leading-4 shadow-md max-w-72.5 cursor-pointer">
-							<img src="./assets/leaves_1247958_1.png" alt="" class="w-6" />
-							<span id="open-popup-button" class="text-sm font-medium">Nutritional Information</span>
+							class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex justify-center rounded-2xl gap-2 px-4 sm:px-5 md:px-7 py-2 bg-[#ffffffd9] text-[12px] sm:text-[13px] md:text-[14px] border border-black leading-4 shadow-md max-w-xs sm:max-w-sm md:max-w-72.5 cursor-pointer">
+							<img src="./assets/leaves_1247958_1.png" alt="" class="w-5 sm:w-5 md:w-6" />
+							<span id="open-popup-button" class="text-xs sm:text-sm font-medium">Nutritional Information</span>
 						</div>
 						<!-- End nutritional information -->
 					</div>
 					<!-- End main product image  -->
-					<div class="grid grid-cols-3 gap-8">
+					<div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8">
 						<!-- small images -->
-						<div class="col-span-3 grid grid-cols-2 gap-3">
-							<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard2.webp" />
-							<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard3copy.webp" />
+						<div class="col-span-3 grid grid-cols-2 gap-2 sm:gap-3">
+							<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard2.webp" class="w-full" />
+							<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard3copy.webp" class="w-full" />
 						</div>
-						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard4.webp" />
-						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard5_1.webp" />
-						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard5_2.webp" />
+						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard4.webp" class="w-full" />
+						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard5_1.webp" class="w-full" />
+						<img src="./assets/LymphDrainageREWAMPEDvisualsArtboard5_2.webp" class="w-full" />
 						<!-- small images -->
 					</div>
 					<!-- percent image -->
-					<div class="flex justify-between mt-4 gap-4 w-full">
+					<div class="flex justify-between mt-2 sm:mt-3 md:mt-4 gap-2 sm:gap-3 md:gap-4 w-full">
 						<img src="./assets/tiredness-min.png" class="w-1/2" />
 						<img src="./assets/puffiness-min.png" class="w-1/2" />
 					</div>
@@ -146,7 +149,7 @@
 				</div>
 				<!-- end leftside -->
 				<!-- rightside -->
-				<div class="w-1/2">
+				<div class="w-full md:w-1/2">
 					<!-- review -->
 					<div class="flex items-center gap-4">
 						<img src="./assets/Frame_229.png" class="max-w-25" />
@@ -235,64 +238,55 @@
 							</svg>
 						</button>
 					</div>
-					<div class="bg-[#f3eee0]! p-4 rounded-lg mt-6">
+					<div class="bg-[#f3eee0] p-4 rounded-lg mt-6">
 						<div class="w-full flex flex-col gap-4">
-							<!-- OPTION -->
-							<label class="product-selector_head">
+							<!-- OPTION 1 -->
+							<label class="product-selector_head group">
 								<div class="flex w-full p-3 justify-between flex-2">
 									<!-- LEFT -->
 									<div class="flex items-center gap-6">
 										<input type="radio" name="bundle" value="1" class="peer mt-1 accent-green-600 size-7" />
 										<div class="flex flex-col gap-1.5">
-											<p class="text-sm font-semibold text-gray-900
-										peer-checked:text-white">
+											<p class="text-sm font-semibold text-gray-900 peer-checked:text-white">
 												1 Bottle
 											</p>
-
-											<p class="text-xs text-gray-500
-									peer-checked${checked ? 'text-white' : 'text-green-200'} peer-checked:text-green-100">
+											<p class="text-xs text-gray-500 peer-checked:text-green-100">
 												1 bottle total | Save $27.99
 											</p>
 										</div>
 									</div>
-
 									<!-- RIGHT -->
 									<div class="text-right">
-										<p class="text-sm font-bold text-gray-900
-                 peer-checked:text-white">
+										<p class="text-sm font-bold text-gray-900 peer-checked:text-white">
 											$31.96
 										</p>
-										<p class="text-xs text-gray-400 line-through
-                 peer-checked:text-green-200">
+										<p class="text-xs text-gray-400 line-through peer-checked:text-green-200">
 											$59.95
 										</p>
 									</div>
 								</div>
-								<span class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md
-								 text-[11px] font-semibold text-white flex-1">
+								<span
+									class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md text-[11px] font-semibold text-white flex-1 opacity-60 group-has-[:checked]:opacity-100">
 									<img src="./assets/delivery-truck_181581.webp" class="h-8" />
 									Free US Shipping
 								</span>
 							</label>
-							<!-- OPTION -->
-							<label class="product-selector_head">
+
+							<!-- OPTION 2 -->
+							<label class="product-selector_head group">
 								<div class="flex w-full p-3 justify-between flex-2">
 									<!-- LEFT -->
 									<div class="flex items-center gap-6">
 										<input type="radio" name="bundle" value="2" class="peer mt-1 accent-green-600 size-7" />
 										<div class="flex flex-col gap-1.5">
-											<p class="text-sm font-semibold text-gray-900
-										peer-checked:text-white">
+											<p class="text-sm font-semibold text-gray-900 peer-checked:text-white">
 												Buy 2 Get 1 Free
 											</p>
-
-											<p class="text-xs text-gray-500
-									peer-checked:text-green-100">
+											<p class="text-xs text-gray-500 peer-checked:text-green-100">
 												3 bottles total | Save $115.93
 											</p>
 										</div>
 									</div>
-
 									<!-- RIGHT -->
 									<div class="text-right">
 										<p class="text-sm font-bold text-gray-900 peer-checked:text-white">
@@ -303,42 +297,38 @@
 										</p>
 									</div>
 								</div>
-								<div class="w-full flex flex-col justify-center">
-									<span class="flex items-center gap-2 w-full p-3 bg-green-700
-								 text-[11px] font-semibold text-white flex-1">
+								<div class="w-full flex flex-col justify-center opacity-60 group-has-[:checked]:opacity-100">
+									<span
+										class="flex items-center gap-2 w-full p-3 bg-green-700 text-[11px] font-semibold text-white flex-1">
 										<img src="./assets/delivery-truck_181581.webp" class="h-8" />
 										Free US Shipping
 									</span>
-									<span class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md
-								 text-[11px] font-semibold text-white flex-1">
+									<span
+										class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md text-[11px] font-semibold text-white flex-1">
 										<img src="./assets/download_5307610.webp" class="h-8" />
 										Free Anti-Bloating Protocol E-book
 									</span>
 								</div>
 							</label>
-							<!-- OPTION -->
-							<label class="product-selector_head">
+
+							<!-- OPTION 3 -->
+							<label class="product-selector_head group">
 								<div class="flex w-full p-3 justify-between flex-2">
 									<!-- LEFT -->
 									<div class="flex items-center gap-6">
 										<input type="radio" name="bundle" value="3" class="peer mt-1 accent-green-600 size-7" />
 										<div class="flex flex-col gap-1.5">
-											<p class="text-sm font-semibold text-gray-900
-										peer-checked:text-white">
+											<p class="text-sm font-semibold text-gray-900 peer-checked:text-white">
 												Buy 3 Get 2 Free
 											</p>
-
-											<p class="text-xs text-gray-500
-									peer-checked:text-green-100">
+											<p class="text-xs text-gray-500 peer-checked:text-green-100">
 												5 bottles total | Save $203.87
 											</p>
 										</div>
 									</div>
-
 									<!-- RIGHT -->
 									<div class="text-right">
-										<p class="text-sm font-bold text-gray-900
-                 peer-checked:text-white">
+										<p class="text-sm font-bold text-gray-900 peer-checked:text-white">
 											$95.88
 										</p>
 										<p class="text-xs text-gray-400 line-through peer-checked:text-green-200">
@@ -346,19 +336,19 @@
 										</p>
 									</div>
 								</div>
-								<div class="w-full flex flex-col justify-center">
-									<span class="flex items-center gap-2 w-full p-3 bg-green-700
-								 text-[11px] font-semibold text-white flex-1">
+								<div class="w-full flex flex-col justify-center opacity-60 group-has-[:checked]:opacity-100">
+									<span
+										class="flex items-center gap-2 w-full p-3 bg-green-700 text-[11px] font-semibold text-white flex-1">
 										<img src="./assets/delivery-truck_181581.webp" class="h-8" />
 										Free US Shipping
 									</span>
-									<span class="flex items-center gap-2 w-full p-3 bg-green-700
-								 text-[11px] font-semibold text-white flex-1">
+									<span
+										class="flex items-center gap-2 w-full p-3 bg-green-700 text-[11px] font-semibold text-white flex-1">
 										<img src="./assets/download_5307610.webp" class="h-8" />
 										Free Anti-Bloating Protocol E-book
 									</span>
-									<span class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md
-								 text-[11px] font-semibold text-white flex-1">
+									<span
+										class="flex items-center gap-2 w-full p-3 bg-green-700 rounded-b-md text-[11px] font-semibold text-white flex-1">
 										<img
 											src="./assets/Kaching-Bundles-Kaching-Bundles-Kaching-Bundles-gift-card_18054896_300x300_300x300_72117561-797d-4e48-9491-3bc1748ce974.avif"
 											class="h-8" />
@@ -615,22 +605,24 @@
 
 		<!--  bloating, brain fog & swollen legs -->
 		<div class="py-14">
-			<div class="py-0 px-[5em]">
+			<div class="md:px-[5em] px-[1em]">
 				<div class="mx-auto my-0">
 					<div class="text-center max-w-200 m-auto">
 						<p class="my-4 text-[32px] lora font-400">
 							Why Your <span class="text-[#039869]!">Bloating, Brain Fog &amp; Swollen Legs</span>
 							Are Actually Connected</p>
-						<p class="text-[18px] font-nunito my-4 leading-[1.3em]">
+						<p class="text-[18px] font-nunito my-4 leading-[1.3em] px-3 md:px-0">
 							If you're experiencing more than one of
 							these
 							symptoms, your
 							body is
 							trying to tell you something:</p>
 					</div>
-					<div id="product_why" class="flex gap-4 mt-10 items-stretch"></div>
+					<div id="product_why" class="grid grid-cols-1 xl:grid-cols-5 lg:grid-cols-5 gap-4"></div>
 					<div class="max-w-230 m-auto">
-						<img loading="lazy" src="assets/Group_7207.webp" class="w-full block object-contain" />
+						<img loading="lazy" src="assets/Group_7207.webp" class="w-full hidden lg:block object-contain" />
+						<img loading="lazy" src="assets/Frame_1000003583_mobile.webp"
+							class="w-full block lg:hidden object-contain mt-3" />
 					</div>
 					<img loading="lazy" src="assets/Frame_1000003589.png" class="mx-auto my-6 max-w-12" />
 
@@ -641,21 +633,21 @@
 					</div>
 
 					<!-- note-img -->
-					<div class="max-w-230 w-full m-auto">
-						<img loading="lazy" src="assets/Frame_1000003590.webp" />
+					<div class="max-w-230 w-full m-auto md:px-0 px-4">
+						<img loading="lazy" src="assets/Frame_1000003590.webp" class="" />
 					</div>
 					<!-- End note-img -->
 
 					<img loading="lazy" src="assets/Frame_1000003589.png" class="mx-auto my-6 max-w-12" />
 
-					<div class="py-0 px-20">
+					<div class="py-0 md:py-6 mx-4 md:px-20">
 						<div class="product_judge-container">
-							<p class="text-[32px] leading-[1.3em] my-4 lora text-center">Your <span
+							<p class="text-[24px] md:text-[32px] leading-[1.3em] my-4 lora text-center">Your <span
 									class="text-[#039869]!">Hidden</span> Drainage
 								System</p>
 						</div>
 						<!-- lymphatic system -->
-						<div class="flex gap-25 items-center">
+						<div class="flex flex-col-reverse gap-4 md:flex-row md:gap-25 items-center">
 							<div class="w-full nunito font-nunito text-[18px] leading-[1.3em] my-2">
 								<div class="pli_top-text">
 									<p>Your lymphatic system is your body's internal cleaning crew—a network of vessels that processes
@@ -691,8 +683,8 @@
 					</div>
 
 					<!--  -->
-					<div class="py-0 px-20">
-						<div class="flex flex-row-reverse gap-25 items-center">
+					<div class="py-0 md:py-6 md:px-20 px-4 md:mt-24">
+						<div class="flex flex-col-reverse md:flex-row-reverse gap-4 md:gap-25 items-center">
 							<div class="nunito font-nunito text-[18px] leading-[1.3em] my-4 max-w-200 m-auto">
 								<div class="my-2">
 									<p class="my-2"><strong>And it accumulates. Day after day. Week after week.</strong></p>
@@ -733,14 +725,14 @@
 			</div>
 			<!-- Why nothing has worked -->
 			<section class="bg-[#f7f2e7] py-0 pb-17.5 mb-8.75 text-center">
-				<div class="max-w-335 mx-auto px-6 lg:px-20">
+				<div class="md:max-w-335 mx-auto px-6 lg:px-20">
 
-					<h2 class="text-[32px] leading-[1.3em] my-6 font-normal">
+					<h2 class="text-[24px] py-2 md:py-0 md:text-[32px] leading-[1.3em] my-6 font-normal">
 						Why Nothing Has <span class="text-[#039869] font-semibold">Worked</span>
 					</h2>
 
 					<!-- GRID -->
-					<div id="why-nothing-grid" class="grid gap-8 md:grid-cols-3 mt-12"></div>
+					<div id="why-nothing-grid" class="grid gap-8 md:grid-cols-3 md:mt-12"></div>
 
 					<span>
 						<img loading="lazy" src="assets/Group_7207_1.webp" class="mx-auto w-5/6" />
@@ -766,15 +758,15 @@
 
 			<!-- why nothing card -->
 			<template id="why-nothing-card">
-				<div class="flex flex-col text-left">
+				<div class="flex flex-col text-center bg-white rounded-md md:bg-none md:text-left">
 					<div class="mb-4">
 						<img class="w-full rounded-xl object-cover card-image" />
 					</div>
 
 					<div class="space-y-4">
-						<h4 class="text-lg font-semibold leading-snug card-title"></h4>
+						<h4 class="text-lg font-semibold leading-snug card-title mx-3 text-center"></h4>
 
-						<div class="bg-[#fdecec] rounded-xl p-5 space-y-3">
+						<div class="bg-[#fdecec] rounded-xl p-5 m-3 space-y-3">
 							<div class="flex items-center justify-between font-semibold text-sm">
 								<span>Why it failed</span>
 								<img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Vector_6.png?v=1760696853"
@@ -822,6 +814,129 @@
 		</section>
 		<!-- End lymphatic Dysfunction Explanation -->
 
+
+		<!-- Product feedback -->
+		<section class="md:py-8 md:px-12.5 nunito font-nunito text-[16px]">
+			<!-- header -->
+			<div class="flex justify-center items-center md:mx-12.5">
+				<div class="m-auto w-full md:max-w-200 flex justify-center items-center flex-col text-center">
+					<img loading="lazy" src="assets/Trustpilot_Score.webp" class="max-w-50 m-auto block" />
+					<h2 class="lora text-[24px] mx-12.5 md:mx-0 md:text-[32px] md:my-4">Real Women, Real Results: 93,000+
+						Transformations
+					</h2>
+					<p class="text-[16px] md:my-4 md:text-[18px]">All reviews verified from actual paying customers</p>
+				</div>
+			</div>
+			<!-- End header -->
+
+			<!-- Rating -->
+			<div class="md:py-12.5 md:mx-12.5">
+				<!-- Header -->
+
+				<!-- title -->
+				<div class="mb-6">
+					<h2 class="text-[24px] trirong text-center">Customer Reviews</h2>
+				</div>
+				<!-- End title -->
+
+				<!-- Customer Reviews -->
+				<div class="flex flex-col md:flex-row justify-between items-stretch px-4 py-6 gap-12.5">
+					<div class="w-full md:w-1/3 border-r-[0.5px] border-r-[#fa8a8a1a]">
+						<div class="flex justify-center items-center h-full">
+							<div class="flex flex-col justify-center items-center">
+								<div class="flex justify-center items-center" aria-label="Average rating is 4.67 stars" role="img">
+									<i class="fa-solid fa-star star-rating"></i>
+									<i class="fa-solid fa-star star-rating"></i>
+									<i class="fa-solid fa-star star-rating"></i>
+									<i class="fa-solid fa-star star-rating"></i>
+									<i class="fa-solid fa-star-half-stroke star-rating"></i>
+									<span class="jdgm-rev-widg__summary-average">
+										4.67 out of 5
+									</span>
+								</div>
+								<div class="text-center flex justify-center items-center gap-4">
+									<p class="font-montserrat">Based on 110 reviews</p>
+									<img class="jdgm-verified-checkmark"
+										src="https://judgeme-public-images.imgix.net/judgeme/logos/verified-checkmark.svg"
+										alt="Verified Checkmark">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="rating-histogram" id="histogram"></div>
+					<div
+						class="w-full md:w-1/3 flex items-center justify-center text-center border-l-[0.5px] border-l-[#fa8a8a1a]">
+						<a
+							class="md:max-w-60 w-full cursor-pointer border-2 py-2.5 px-5 font-montserrat font-bold rounded-sm border-[#fa8a8a] bg-[#fa8a8a] text-white">
+							Write a review
+						</a>
+					</div>
+				</div>
+				<!-- End Customer Reviews -->
+
+				<!-- medal -->
+				<div class="border-t-[0.8px] border-t-[#fa8a8a1a]">
+					<div class="mx-auto flex flex-col justify-center items-center max-w-20 p-4">
+						<img loading="lazy" src="assets/diamond.svg" class="" />
+						<p class="text-[#4c8eda] text-[12px] font-bold">
+							100.0
+						</p>
+					</div>
+				</div>
+				<!-- End medal -->
+
+				<!-- End header -->
+
+				<!-- customer reviews -->
+				<!-- Reviews Section -->
+				<section class="md:py-12 px-4 lg:px-8">
+					<div class="md:max-w-4xl mx-auto bg-white rounded-lg shadow-sm">
+
+						<!-- Sort Dropdown -->
+						<div class="p-4 border-b border-gray-200">
+							<div class="relative inline-block">
+								<select
+									class="w-full px-4 py-2 text-[#fa8a8a] appearance-none bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-200 cursor-pointer"
+									id="sortDropdown">
+									<option value="most-recent">Most Recent</option>
+									<option value="highest-rating">Highest Rating</option>
+									<option value="lowest-rating">Lowest Rating</option>
+									<option value="with-pictures">Only Pictures</option>
+									<option value="pictures-first">Pictures First</option>
+									<option value="videos-first">Videos First</option>
+									<option value="most-helpful">Most Helpful</option>
+								</select>
+								<div class="pointer-events-none absolute px-2 inset-y-0 right-0 flex items-center text-[#fa8a8a]">
+									<i class="fa-solid fa-chevron-down text-xs text-[#fa8a8a]"></i>
+								</div>
+							</div>
+						</div>
+
+						<!-- Reviews List -->
+						<div id="reviewsList" class="divide-y divide-[#fa8a8a1a]">
+							<!-- Reviews sẽ được render ở đây -->
+						</div>
+
+						<!-- Pagination -->
+						<div class="p-6 border-t border-gray-200">
+							<div class="flex justify-center items-center gap-2" id="pagination">
+								<!-- Pagination sẽ được render ở đây -->
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!-- End Reviews Section -->
+				<!-- customer reviews -->
+
+			</div>
+			<!-- End rating -->
+
+		</section>
+		<!-- End product feeback -->
+
+
+
 		<!-- ICON CARD TEMPLATE -->
 		<section class="bg-[#f3eee0] py-10">
 			<div class="max-w-335 mx-auto px-6 lg:px-20">
@@ -844,8 +959,8 @@
 		<!-- End product judge session -->
 
 		<!-- Expert Advice  -->
-		<section class="">
-			<div class="mx-auto max-w-5/6">
+		<section class="md:py-14">
+			<div class="md:mx-auto md:max-w-5/6 p-6 w-full">
 
 				<div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
 
@@ -855,7 +970,7 @@
 
 							<p class="text-sm font-medium mb-3">July 4th, 2025</p>
 
-							<h2 class="text-2xl md:text-3xl font-serif font-normal leading-snug mb-6">
+							<h2 class="text-[24px] md:text-3xl font-serif font-normal leading-snug mb-6">
 								Expert Advice from Dr. Emily Chen of a Premier New York Skin Clinic
 							</h2>
 
@@ -873,9 +988,9 @@
 							</div>
 
 							<!-- CTA -->
-							<div class="mt-8">
-								<a href="https://pay.trysculptique.com/lymphatic/checkout"
-									class="inline-block bg-black text-white text-center px-2 md:px-8 py-4 text-sm font-semibold hover:opacity-90 transition md:w-5/6">
+							<div class="md:mt-8 mt-2">
+								<a href="https://pay.trysculptique.com/lymphatic/checkout" class="inline-block bg-black text-white text-center px-2 md:px-8 py-4 
+									text-sm font-semibold hover:opacity-90 transition w-full md:w-5/6">
 									Try Lymphatic Drainage Risk-Free
 								</a>
 
@@ -900,10 +1015,96 @@
 		</section>
 		<!-- End Expert Advice  -->
 
+		<!-- Trustpilot review -->
+		<section class="bg-[#f3eee0] py-6 md:py-14 md:px-12.5">
+			<div class="mx-auto text-[16px] nunito font-nunito">
+				<div class="flex flex-col justify-center items-center">
+					<img src="assets/Trustpilot_review_2.webp" alt="Trustpilot reviews" class="max-w-75 mx-auto ml-auto mb-4" />
+					<h2 class="text-center text-[24px] md:text-[32px] leading-snug lora font-lora">
+						See The Stories of Sculptique™ Women Firsthand
+					</h2>
+				</div>
+
+				<!-- video slider -->
+				<div class="product_carousel-outer relative">
+					<div class="product_ugc-container mb-10 slick-initialized slick-slider slick-dotted mx-2 md:px-12.5">
+						<div class="slick-list relative block overflow-hidden m-0 p-0 draggable">
+							<div class="slick-track flex relative top-0 left-0 mx-auto"
+								style="opacity: 1; width: 3100px; transform: translate3d(0px, 0px, 0px);">
+								<!-- video -->
+								<div class="float-left h-full min-h-px md:w-77.5 p-2" data-slick-index="0" aria-hidden="false"
+									role="tabpanel" id="slick-slide" aria-describedby="slick-slide-control">
+									<div>
+										<div class="inline-block w-full">
+											<div class="rounded-sm h-fit relative cursor-pointer overflow-hidden bg-transparent">
+												<img
+													src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/mingcute_play-fill.png?v=1752485519"
+													class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 z-10">
+												<video playsinline="" muted="muted" loop="loop" preload="metadata"
+													poster="//trysculptique.com/cdn/shop/files/Screenshot_2025-07-14_at_12.40.11.png?v=1752486039"
+													class="block w-full object-cover aspect-9/16 overflow-hidden rounded-sm">
+													<source src="https://cdn.shopify.com/videos/c/o/v/014b7db24d12443791bd22d345637ccc.mp4"
+														type="video/mp4">
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="slick-dots" role="tablist">
+							<li class="slick-active " role="presentation"><button type="button" role="tab" id="slick-slide-control20"
+									aria-controls="slick-slide20" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control21"
+									aria-controls="slick-slide21" aria-label="2 of 3" tabindex="-1">2</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control22"
+									aria-controls="slick-slide22" aria-label="3 of 3" tabindex="-1">3</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control23"
+									aria-controls="slick-slide23" aria-label="4 of 3" tabindex="-1">4</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control24"
+									aria-controls="slick-slide24" aria-label="5 of 3" tabindex="-1">5</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control25"
+									aria-controls="slick-slide25" aria-label="6 of 3" tabindex="-1">6</button></li>
+							<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control26"
+									aria-controls="slick-slide26" aria-label="7 of 3" tabindex="-1">7</button></li>
+						</ul>
+					</div>
+					<div class="flex justify-end gap-4 absolute -bottom-10 right-14 transform -translate-y-1/2 z-10">
+						<div class="product_carousel-prev max-w-8">
+							<img
+								src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_55aa38bb-cb5e-4608-9097-927814968771.png?v=1758716845">
+						</div>
+						<div class="product_carousel-next max-w-8">
+							<img style="transform: rotate(180deg); position: relative; top: 1px;"
+								src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_55aa38bb-cb5e-4608-9097-927814968771.png?v=1758716845">
+						</div>
+					</div>
+				</div>
+				<!-- CTA -->
+				<div class="md:mt-14 flex flex-col justify-center items-center md:px-0 px-4">
+					<a href="https://pay.trysculptique.com/lymphatic/checkout"
+						class="w-full md:w-fit bg-black text-white text-center px-2 md:px-20 md:py-4.5 py-4 text-sm font-semibold hover:opacity-90 transition">
+						Try Lymphatic Drainage Risk-Free
+					</a>
+
+					<div class="flex items-center justify-center gap-3 mt-4 text-sm">
+						<img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/60-days_11622780_1_1.png?v=1752388395"
+							class="w-5" />
+						<span class="font-semibold">60-Day Money-Back Guarantee</span>
+					</div>
+				</div>
+				<!-- End video container -->
+
+			</div>
+			<!-- End video slider -->
+			</div>
+		</section>
+		<!-- End Trustpilot review -->
+
 		<!-- Freequently Asked Questions -->
 		<section class="flex justify-center">
 			<div class="py-14">
-				<div class="px-12.5 max-w-335">
+				<div class="w-full md:px-12.5 md:max-w-335">
 					<div class="mx-auto py-8 w-full flex flex-col justify-center items-center">
 						<h2 class="faq-title lora">Frequently Asked Questions</h2>
 
@@ -935,28 +1136,30 @@
 
 		<!-- Misson -->
 		<section class="px-12.5">
-			<div class="mx-auto px-6">
+			<div class="mx-auto px-0 md:px-6 py-8 md:py-6">
 
-				<div class="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10">
+				<div class="grid grid-cols-1 md:grid-cols-2 items-stretch gap-4 md:gap-10">
 
 					<!-- CONTENT -->
-					<div class="flex flex-col justify-center p-8">
-						<h2 class="text-2xl md:text-3xl leading-snug mb-6 lora font-lora">
+					<div class="flex flex-col justify-center p-0 md:p-8">
+						<h2 class="text-[24px] md:text-3xl leading-snug mb-6 lora font-lora text-center md:text-start">
 							We’re On A Mission To Help 100,000,000 Women Visibly, Naturally Get Rid Of Bloating…And Feel Like
 							Themselves Again
 						</h2>
 
-						<div class="text-[18px] nunito font-nunito my-3">
+						<div class="text-[18px] nunito font-nunito text-center md:text-start my-2 md:my-3">
 							<p>Here's where we're at right now:</p>
 						</div>
 
-						<img src="assets/numbdeskt-min_png.webp" alt="Mission progress" class="object-cover" />
+						<img src="assets/numbdeskt-min_png.webp" alt="Mission progress" class="object-cover md:block hidden" />
 					</div>
 
 					<!-- IMAGE -->
 					<div class="w-full h-full">
 						<img src="assets/Frame_1000003537.webp" alt="Mission" class="w-full h-full object-cover" />
 					</div>
+
+					<img src="assets/numbmob-min_png.webp" alt="Mission progress" class="object-cover md:hidden block" />
 
 				</div>
 
@@ -965,8 +1168,8 @@
 		<!-- End misson -->
 
 		<!-- Footer -->
-		<section class="bg-[#f3eee0] py-16">
-			<div class="w-5/6 mx-auto px-6">
+		<section class="bg-[#f3eee0] py-2 md:py-16">
+			<div class="w-full mx-auto px-2 md:px-10">
 
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
@@ -974,13 +1177,16 @@
 					<div class="flex flex-col justify-center nunito font-nunito">
 
 						<!-- REVIEWS -->
-						<img src="assets/Trustpilot_review.webp" alt="Trustpilot reviews" class="w-3/5" />
 
-						<h2 class="text-[32px] md:text-3xl lora font-lora leading-snug my-4">
+						<img src="assets/Trustpilot_review.webp" alt="Trustpilot reviews" class="w-3/5 md:block hidden" />
+						<img src="assets/Trustpilot_review_1.webp" alt="Trustpilot reviews"
+							class="max-w-62.5 mx-auto px-6 py-3 block md:hidden" />
+
+						<h2 class="text-[24px] md:text-[32px] md:text-3xl lora font-lora leading-snug my-4">
 							Stop Masking Symptoms. Start Restoring Root Cause.
 						</h2>
 
-						<div class="text-[18px] space-y-4 my-3">
+						<div class="text-[18px] md:space-y-4 md:my-3">
 							<p class="my-3">
 								You deserve to feel like yourself again. To wake up without puffiness.
 								To see your ankles. To look in the mirror and recognize the vibrant woman
@@ -993,8 +1199,13 @@
 							</p>
 						</div>
 
+						<!-- IMAGE -->
+						<div class="md:hidden block py-2">
+							<img src="assets/before-min_png.webp" alt="Before result" class="object-contain" />
+						</div>
+
 						<!-- CTA -->
-						<div class="flex flex-col justify-center w-4/6">
+						<div class="flex flex-col justify-center xl:w-4/6 w-full">
 							<a href="https://pay.trysculptique.com/lymphatic/checkout" class="inline-block bg-black text-white px-8 py-4 text-sm font-semibold w-full 
 								text-center hover:opacity-90 transition rounded-sm">
 								Try Lymphatic Drainage Risk-Free
@@ -1010,7 +1221,7 @@
 					</div>
 
 					<!-- IMAGE -->
-					<div class="w-full h-full">
+					<div class="w-full h-full hidden md:block">
 						<img src="assets/before-min_png.webp" alt="Before result" class="w-full h-full object-cover" />
 					</div>
 

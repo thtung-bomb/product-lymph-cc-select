@@ -136,15 +136,15 @@ productWhyBloating.innerHTML = "";
 listWhyBloatingCell.map(item => {
 	productWhyBloating.innerHTML +=
 		`
-			<div class="product_why-bloating-cell flex flex-col h-full rounded-md overflow-hidden">
-        <div class="h-45 overflow-hidden">
-            <img src=${item.img}
-                 class="w-full h-full object-cover block">
-        </div>
-        <div class="product_why-bloat-cell-inn flex-1 bg-[#f7f7f7] p-4 flex items-center justify-center text-center">
-            <p>${item.text}</p>
-        </div>
+			<div class="product_why-bloating-cell flex flex-row md:flex-col h-full rounded-md overflow-hidden">
+    <div class="w-1/2 md:w-full md:h-1/2 overflow-hidden">
+        <img src=${item.img}
+             class="w-full h-full object-cover block">
     </div>
+    <div class="product_why-bloat-cell-inn w-1/2 md:w-full md:h-1/2 bg-[#f7f7f7] p-4 flex items-center justify-center text-center">
+        <p>${item.text}</p>
+    </div>
+</div>
 		`
 });
 
