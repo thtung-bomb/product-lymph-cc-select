@@ -1,10 +1,10 @@
-const ratingsData = [
-	{ rating: 5, frequency: 84, percentage: 76 },
-	{ rating: 4, frequency: 17, percentage: 15 },
-	{ rating: 3, frequency: 8, percentage: 7 },
-	{ rating: 2, frequency: 1, percentage: 1 },
-	{ rating: 1, frequency: 0, percentage: 0 }
-];
+// const ratingsData = [
+// 	{ rating: 5, frequency: 84, percentage: 76 },
+// 	{ rating: 4, frequency: 17, percentage: 15 },
+// 	{ rating: 3, frequency: 8, percentage: 7 },
+// 	{ rating: 2, frequency: 1, percentage: 1 },
+// 	{ rating: 1, frequency: 0, percentage: 0 }
+// ];
 
 // Hàm render stars
 function renderStars(rating) {
