@@ -155,7 +155,7 @@ const lymphIngredients = [
 
 
 const faqRoot = document.getElementById("faq-root");
-const container = document.getElementById("lymph-accordion");
+const lymphContainer = document.getElementById("lymph-accordion");
 
 
 faqRoot.innerHTML = FAQS.map((item, index) => `
@@ -187,7 +187,7 @@ document.querySelectorAll(".faq-header").forEach((header) => {
 });
 
 
-container.innerHTML = lymphIngredients.map((item, index) => `
+lymphContainer.innerHTML = lymphIngredients.map((item, index) => `
 	<div id="lymph-ingredient-${index}" class="product-lymph-ingredient bg-white ${index === 0 ? 'active' : ''}">
     
     <p class="product_lymph-ingr-subtitle nunito">
