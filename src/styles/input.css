@@ -133,12 +133,16 @@
   /* End lymph ingredient accordion */
 
   /* slick */
+  .product_ugc-container {
+    @apply overflow-hidden;
+  }
+
   .slick-dots {
-    @apply absolute flex justify-start w-4/7 md:w-[70%] xl:w-full md:p-0 md:m-0 list-none;
+    @apply relative flex justify-start w-full max-w-[calc(100%-100px)] md:p-0 md:m-0 list-none overflow-hidden;
   }
 
   .slick-dots li {
-    @apply w-[148.58px] h-1 m-0;
+    @apply flex-1 min-w-0 h-1 m-0;
   }
 
   .slick-dots li button {
