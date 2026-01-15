@@ -335,7 +335,7 @@
 }
 
 .product_judge-container {
-  @apply md:max-w-200 m-auto mx-6;
+  @apply md:max-w-200 mx-auto px-6 w-full text-center;
 }
 
 .pli_top-list {
